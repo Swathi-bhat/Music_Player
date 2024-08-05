@@ -1,0 +1,96 @@
+        /* songs/static/songs/css/styles.css */
+        
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            /* background-image: url('/static/songs/images/background.jpg'); */
+            background-color: black;
+            background-size: cover;
+        }
+        
+        .player-container {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .next-button {
+            display: inline-block;
+            background-color: #ffffff;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        
+        .next-button:hover {
+            background-color: #0056b3;
+        }
+        
+        h1 {
+            text-align: center;
+            color: white;
+        }
+        
+        .card-container {
+            margin-left: 100px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .card_1 {
+            border: 1px solid white;
+            padding: 16px;
+            margin: 16px;
+            border-radius: 8px;
+            width: 200px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            color: white;
+        }
+        
+        .flex-prop {
+            display: flex;
+        }
+        
+        .flex-prop .next {
+            margin: 300px 0px 200px 500px;
+        }
+        
+        .flex-prop .prev {
+            margin: 300px 0px 200px 0px;
+        }
+        
+        .card {
+            border: 1px solid white;
+            padding: 16px;
+            margin: 100px 50px;
+            border-radius: 8px;
+            width: 300px;
+            height: 400px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            color: white;
+        }
+        
+        .card_1 img {
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+        }
+        
+        .card img {
+            width: 250px;
+            height: 270px;
+            border-radius: 8px;
+        }
+        
+        .card h2 {
+            font-size: 1.5em;
+            margin: 0.5em 0;
+        }
+        
+        .card p {
+            margin: 0.5em 0;
+        }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ song.title }}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'songs/css/styles.css' %}">
+    <script src="{% static 'songs/js/scripts.js' %}"></script>
+</head>
+<body>
+    <div class="flex-prop">
+    <div class="next">
+        {% if next_song %}
+            <a href="{% url 'play_song' next_song.id %}" class="next-button">&#8249;</a>
+    
+        {% endif %}
+    </div>
+    <div class="card">
+       
+        {% if song.album_art_url %}
+            <img src="{{ song.album_art_url }}" alt="Album Art">
+            {% else %}
+            <img src="{% static 'songs/images/default_album_art.jpg' %}" alt="Default Album Art" class="album-art">
+        {% endif %}
+        <h2>{{ song.title }}</h2>
+        <p>by {{ song.artist }}</p>
+        <audio controls autoplay id="audio-player">
+            <source src="{{ song.audio_file.url }}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <br><br><br>
+        
+        <a href="{% url 'song_list' %}">Back to song list</a>
+        
+       
+    </div>
+    <div class="prev">
+        {% if previous_song %}
+            <a href="{% url 'play_song' previous_song.id %}" class="next-button">&#8250;</a>
+        {% endif %}
+    </div>
+</div>
+        
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Song List</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'songs/css/styles.css' %}">
+</head>
+<body>
+    <h1>Music Player</h1> 
+    <h1>Explore the world of music..</h1>
+    <div class="card-container">
+        {% for song in songs %}
+            <div class="card_1">
+                {% if song.album_art_url %}
+                    <img src="{{ song.album_art_url }}" alt="Album Art">
+                {% else %}
+                    <img src="{% static 'songs/images/default_album_art.jpg' %}" alt="Default Album Art">
+                {% endif %}
+                <h2>{{ song.title }}</h2>
+                <a href="{% url 'play_song' song.id %}">Play Song</a>
+            </div>
+        {% endfor %}
+    </div>
+    <script src="{% static 'songs/js/scripts.js' %}"></script>
+</body>
+</html>
